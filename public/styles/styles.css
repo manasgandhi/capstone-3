@@ -1,0 +1,12 @@
+html{
+    margin: 1%;
+    height: 100vh;
+}
+#deleted{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot{
+    height: 10vh;
+}

@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<div>
+  <h3>Click on the blog's title you want to delete.</h3>
+  <% if(locals.blogs) { %>
+    <% var i = 0; %>
+    <div class="list-group">
+      <% blogs.forEach(here => { %>
+        <% console.log(i); %>
+        <a href="/deleting?id=<%= i %>" id="<%= i %>" class="list-group-item list-group-item-action" aria-current="true">
+          <%= here.title %>
+        </a>
+        <% i++ %>
+      <% }); %>
+    </div>  
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div >
+
+  <% if(locals.blogs) { %>
+    <% var i = 0; %>
+    
+    <div class="list-group">
+      <% blogs.forEach(here => { %>
+        <% console.log(i); %>
+        <a href="/show?id=<%= i %>" id="<%= i %>" class="list-group-item list-group-item-action" aria-current="true">
+          <%= here.title %>
+        </a>
+        <% i++ %>
+      <% }); %>
+    </div>
+    
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>
